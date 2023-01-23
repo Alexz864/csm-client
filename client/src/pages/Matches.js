@@ -15,7 +15,7 @@ const Matches = () => {
     const [matchList, setMatchList] = useState([]);
 
     useEffect(() => {
-        Axios.get('http://localhost:5000/match/read').then((response) => {
+        Axios.get('https://csm-test-server.onrender.com/match/read').then((response) => {
             setMatchList(response.data)
         })
     },[]);

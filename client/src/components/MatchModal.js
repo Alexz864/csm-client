@@ -29,7 +29,7 @@ const MatchModal = ( {closeMatchModal} ) => {
     const [scor, setScor] = useState('');
 
     const addMatch = () => {
-        Axios.post("http://localhost:5000/match/insert", {
+        Axios.post("https://csm-test-server.onrender.com/match/insert", {
             team1: team1,
             team2: team2,
             data: data,

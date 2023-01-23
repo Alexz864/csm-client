@@ -40,14 +40,14 @@ const AdminDashboard = ({logoutAdmin, user}) => {
 
     const [matchList, setMatchList] = useState([]);
     useEffect(() => {
-        Axios.get('http://localhost:5000/match/read').then((response) => {
+        Axios.get('https://csm-test-server.onrender.com/match/read').then((response) => {
             setMatchList(response.data)
         })
         .catch((err) => console.log(err, 'It has an error.'))
     },[]);
 
     const deleteMatch = (id) => {
-        Axios.delete(`http://localhost:5000/match/delete/${id}`).then(() => {
+        Axios.delete(`https://csm-test-server.onrender.com/match/delete/${id}`).then(() => {
             setMatchList(matchList.filter((val) => {
                 return val._id !== id;
             }));
@@ -56,7 +56,7 @@ const AdminDashboard = ({logoutAdmin, user}) => {
 
     const [data, setData] = useState([]);
     useEffect(() => {
-        Axios.get('http://localhost:5000/player/upload').then((response) => {
+        Axios.get('https://csm-test-server.onrender.com/player/upload').then((response) => {
             setData(response.data)
         })
         .catch((err) => console.log(err, 'It has an error.'));

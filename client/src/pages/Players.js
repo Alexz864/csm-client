@@ -14,7 +14,7 @@ import {
 const Players = () => {
     const [data, setData] = useState([]);
     useEffect(() => {
-        Axios.get('http://localhost:5000/player/upload').then((response) => {
+        Axios.get('https://csm-test-server.onrender.com/player/upload').then((response) => {
             setData(response.data)
         })
         .catch((err) => console.log(err, 'It has an error.'));

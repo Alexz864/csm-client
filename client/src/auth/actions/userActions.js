@@ -5,7 +5,7 @@ import {sessionService} from 'redux-react-session';
 export const loginAdmin = (credentials, navigate, setFieldError, setSubmitting) => {
     // Make some checks and get some data
 
-    axios.post("http://localhost:5000/admin/signin", credentials, {
+    axios.post("https://csm-test-server.onrender.com/admin/signin", credentials, {
         headers: {
             "Content-Type": "application/json"
         }

@@ -54,7 +54,7 @@ const PlayerModal = ({ closePlayerModal }) => {
     formData.append('image', data.image);
 
     const addPlayer = () => {
-        Axios.post("http://localhost:5000/player/upload", formData)
+        Axios.post("https://csm-test-server.onrender.com/player/upload", formData)
         .catch((err) => console.log(err));
     };
 
@@ -81,7 +81,7 @@ const PlayerModal = ({ closePlayerModal }) => {
 
                 <StyledLabel>Poza</StyledLabel>
                     <FileUpload onSelect={handleFileChange}
-                        name='image' url='http://localhost:5000/player/upload'accept='image/*'
+                        name='image' url='https://csm-test-server.onrender.com/player/upload'accept='image/*'
                         customUpload uploadHandler={addPlayer}/>
 
                 <ButtonGroup>
